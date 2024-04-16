@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ages </title>
+
+  
+    <!-- Custom styles -->
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .bg {
+            background: linear-gradient(to bottom, #f6d365, #fda085);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .my-div {
+            max-width: 400px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="my-div">
+            <h2 class="text-center mb-4">Ages to be displayed here </h2>
+           
+            <ul class="list-group">
+                THE AGES ARE :
+                {% for age in AL %}
+                    {% if age < 18 %}
+                      <li class="list-group-item">UnderAge</li>
+                    {%else%}
+                     <li class="list-group-item">{{ age }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
